@@ -30,7 +30,7 @@ def fetch_article_data(post):
 def fetch_articles(active_page):
     PostList = []
     try:
-        response = requests.get(f"https://thadinn.com/en_US/page/{active_page}")
+        response = requests.get(f">>?")
         soup = BeautifulSoup(response.text, 'html.parser')
         articles = soup.find_all('article')
         if len(articles) == 0:
